@@ -3,6 +3,8 @@
 Neovim plugin for creating slides with markdown or asciidoc.
 Note, this is experimental plugin and may not work as expected.
 
+Plugin is based on TJ DeVries' video https://youtu.be/VGid4aN25iI.
+
 ## Usage
 
 ### Create slides
