@@ -14,7 +14,7 @@ require {
     config = function()
         require("apechinsky/slides").setup()
     end
-    }
+}
 ```
 
 ### Create slides

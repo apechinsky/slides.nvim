@@ -1,7 +1,9 @@
 local M = {}
 
 M.setup = function()
-    -- nothing
+    vim.api.nvim_create_user_command("Slides", function ()
+        M.start()
+    end, {})
 end
 
 ---@class present.Slides
