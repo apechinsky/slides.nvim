@@ -5,7 +5,17 @@ Note, this is experimental plugin and may not work as expected.
 
 Plugin is based on TJ DeVries' video https://youtu.be/VGid4aN25iI.
 
-## Usage
+## Installation
+
+Lazy
+```
+require {
+    "apechinsky/slides.nvim",
+    config = function()
+        require("apechinsky/slides").setup()
+    end
+    }
+```
 
 ### Create slides
 
