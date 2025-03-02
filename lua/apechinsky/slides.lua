@@ -78,4 +78,9 @@ M.start = function (opts)
     end, { buffer = float.buf })
 end
 
+M.config = function (opts)
+    print("Configuring slides")
+    opts = opts or {}
+end
+
 return M

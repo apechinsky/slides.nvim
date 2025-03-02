@@ -1,4 +1,6 @@
-# "slides.nvim"
+# slides.nvim
+
+Test neovim plugin.
 
 Neovim plugin for creating slides with markdown or asciidoc.
 Note, this is experimental plugin and may not work as expected.
@@ -9,11 +11,8 @@ Plugin is based on TJ DeVries' video https://youtu.be/VGid4aN25iI.
 
 Lazy
 ```
-require {
+return {
     "apechinsky/slides.nvim",
-    config = function()
-        require("apechinsky/slides").setup()
-    end
 }
 ```
 
@@ -27,10 +26,11 @@ Slides are defined by first level header:
 
 ### Start presentation
 
-```lua
-require("apechinsky/slides").setup()
-```
+* Start presentation:
+  * Option 1: `:Slides` - Command
+  * Option 2: require("apechinsky/slides").start() - Lua call
 
-* 'n' - next slide
-* 'p' - previous slide
-* 'q' - quit
+* Control presentation
+  * 'n' - next slide
+  * 'p' - previous slide
+  * 'q' - quit
