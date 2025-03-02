@@ -1,9 +1,7 @@
 local M = {}
 
-M.setup = function()
-    vim.api.nvim_create_user_command("Slides", function ()
-        M.start()
-    end, {})
+M.setup = function (opts)
+    opts = opts or {}
 end
 
 ---@class present.Slides
@@ -76,11 +74,6 @@ M.start = function (opts)
     vim.keymap.set("n", "q", function ()
         vim.api.nvim_win_close(float.win, true)
     end, { buffer = float.buf })
-end
-
-M.config = function (opts)
-    print("Configuring slides")
-    opts = opts or {}
 end
 
 return M

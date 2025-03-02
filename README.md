@@ -13,6 +13,7 @@ Lazy
 ```
 return {
     "apechinsky/slides.nvim",
+    main = 'apechinsky/slides',
 }
 ```
 
