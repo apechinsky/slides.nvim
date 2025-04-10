@@ -20,10 +20,10 @@ return {
 ### Create slides
 
 Create slides file in markdown or asciidoc format.
-Slides are defined by first level header:
+Slides are defined by second level header:
 
-* '# ' - for markdown
-* '= ' - for asciidoc
+* '## ' - for markdown
+* '== ' - for asciidoc
 
 ### Start presentation
 

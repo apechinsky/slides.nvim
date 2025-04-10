@@ -12,14 +12,21 @@ end
 ---@return present.Slides
 local parse_slides = function(lines)
     local slides = {}
-    local slide = {}
+    local slide = nil
 
     for _, line in ipairs(lines) do
-        if (line:find("^# ") or line:find("^= ")) and #slide > 0 then
-            table.insert(slides, slide)
+        local is_header = line:find("^## ") or line:find("^== ")
+
+        if is_header then
+            if slide ~= nil then
+                table.insert(slides, slide)
+            end
             slide = {}
         end
-        table.insert(slide, line)
+
+        if slide ~= nil then
+            table.insert(slide, line)
+        end
     end
     table.insert(slides, slide)
     return slides
@@ -77,3 +84,5 @@ M.start = function (opts)
 end
 
 return M
+-- parse_slides({ "= h1", "line", "== h2-1", "line1", "== h2-2", "line1", "== h2-3", "line3" })
+
