@@ -14,6 +14,16 @@ local parse_slides = function(lines)
     local slides = {}
     local slide = nil
 
+    table.insert(slides, {
+        "Asciidoc/markdown slides",
+        "",
+        "Define slides with second level header (== or ##)",
+        "",
+        "* 'n' - next slide",
+        "* 'p' - previous slide",
+        "* 'q' - quit",
+    })
+
     for _, line in ipairs(lines) do
         local is_header = line:find("^## ") or line:find("^== ")
 
